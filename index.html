@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=360" id="viewport" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				background-color: #ddd;
+			}
+			canvas{
+				display: block;
+				background: url(images/bg.png);
+			}			
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas" width="360" height="480"></canvas>
+		<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/simpleInheritance.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/underscore.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/Game.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/FrameUtil.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/StaticResourcesUtil.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/CellBlock.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/Map.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/ActiveBlock.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			document.getElementById("canvas").style.margin = document.documentElement.clientHeight / 2 - 240 + "px" + " auto";
+			var game = new Game({
+				"fps": 50,
+				"canvasId": "canvas" 
+			});
+		</script>
+		<audio src="bgm.mp3" autoplay="autoplay"></audio>
+	</body>
+</html>
